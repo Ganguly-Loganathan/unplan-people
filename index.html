@@ -1,4 +1,4 @@
-<!doctype html>
+cd /workspaces/unplan-people/backend<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#172b4d">
@@ -8,10 +8,68 @@
 @media(max-width:1100px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.featuregrid{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:760px){.sidebar{position:fixed;z-index:10;left:-260px;top:0;bottom:0;transition:left .2s;box-shadow:10px 0 35px #15294b20}.sidebar.open{left:0}.mobile-menu{display:block}.topbar{height:68px;padding:0 16px}.topbar h1{font-size:18px}.top-actions .datepill{display:none}.content{padding:20px 15px}.welcome{align-items:flex-start;flex-direction:column}.welcome h2{font-size:21px}.cards{gap:10px}.card{padding:15px}.metric{font-size:25px}.layout{gap:13px}.featuregrid{gap:9px}.feature{padding:12px}.welcome .btn{width:100%;justify-content:center}.topbar{gap:9px}.crumb{font-size:10px}.check-actions{flex-direction:column}.time{font-size:30px}}
 @media(max-width:380px){.cards{grid-template-columns:1fr 1fr}.metric{font-size:23px}.metric-head{font-size:10px}.metric-icon{width:32px;height:32px}.featuregrid{grid-template-columns:1fr 1fr}}
+
+/* UNPLAN brand and responsive admin account controls */
+.brand{padding:0 8px 25px;display:flex;align-items:center;justify-content:center}
+.brand-logo{display:block;width:100%;max-width:205px;height:auto;max-height:78px;object-fit:contain;background:#fff;border-radius:9px;padding:7px 9px}
+.top-actions{gap:14px}
+.admin-menu-wrap{position:relative}
+.admin-trigger{display:flex;align-items:center;gap:9px;border:1px solid var(--line);background:#fff;border-radius:12px;padding:6px 10px 6px 6px;color:var(--ink);text-align:left;min-width:150px}
+.admin-trigger .avatar{flex:0 0 36px;width:36px;height:36px}
+.admin-trigger-label{display:flex;flex-direction:column;min-width:0}
+.admin-trigger-label b{font-size:12px;line-height:1.3}
+.admin-trigger-label small{font-size:10px;color:var(--muted);line-height:1.3}
+.admin-chevron{margin-left:auto;color:var(--muted)}
+.admin-dropdown{position:absolute;right:0;top:calc(100% + 8px);width:180px;padding:6px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 35px #17243a20;z-index:30}
+.admin-dropdown[hidden],.modal-backdrop[hidden]{display:none!important}
+.admin-dropdown button{display:block;width:100%;text-align:left;border:0;background:#fff;color:var(--ink);border-radius:8px;padding:11px 12px;font-weight:600}
+.admin-dropdown button:hover{background:#f2f5fb}
+.admin-dropdown button:last-child{color:var(--red)}
+.modal-backdrop{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:#101b2dcc;padding:18px}
+.login-modal{position:relative;width:min(100%,420px);background:#fff;border-radius:18px;padding:28px;box-shadow:0 24px 80px #08152b55}
+.modal-close{position:absolute;right:15px;top:12px;border:0;background:transparent;font-size:26px;color:var(--muted);line-height:1}
+.login-logo{display:block;width:min(100%,230px);height:auto;max-height:78px;object-fit:contain;margin:0 auto 20px}
+.login-modal h2{text-align:center;margin:0 0 5px;font-size:22px}
+.login-note{text-align:center;color:var(--muted);font-size:12px;margin:0 0 22px}
+.login-modal label{display:block;font-size:12px;font-weight:700;margin:13px 0 6px}
+.login-modal input{width:100%;border:1px solid var(--line);border-radius:9px;padding:12px;background:#fff;color:var(--ink)}
+.login-hint{font-size:11px;line-height:1.5;color:var(--muted);background:#f5f7fb;border-radius:9px;padding:10px;margin:13px 0}
+.login-submit{width:100%;justify-content:center}
+@media(max-width:760px){
+  .brand{padding:0 5px 22px}
+  .brand-logo{max-width:185px;max-height:70px}
+  .top-actions{gap:7px}
+  .admin-trigger{min-width:0;padding:5px 7px 5px 5px;gap:6px}
+  .admin-trigger .avatar{width:32px;height:32px;flex-basis:32px}
+  .admin-trigger-label b{font-size:11px}
+  .admin-trigger-label small{font-size:9px}
+  .admin-chevron{font-size:11px}
+  .login-modal{padding:24px 20px}
+}
+@media(max-width:420px){
+  .admin-trigger-label{display:none}
+  .admin-trigger{padding-right:7px}
+  .admin-chevron{display:none}
+  .topbar h1{font-size:16px}
+  .crumb{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
 </style></head>
 <body><div class="shell">
-<aside class="sidebar" id="sidebar"><div class="brand"><div class="brandmark">U</div><div><strong>UNPLAN</strong><small>PEOPLE & FIELD OPS</small></div></div><div class="navlabel">WORKSPACE</div><nav class="nav" id="nav"><button class="active" data-page="dashboard"><span class="ico">▦</span>Overview</button><button data-page="attendance"><span class="ico">◷</span>Attendance</button><button data-page="employees"><span class="ico">♙</span>Employees</button><button data-page="leave"><span class="ico">▣</span>Leave management</button><button data-page="gps"><span class="ico">⌖</span>GPS & field tracking</button><button data-page="reports"><span class="ico">▥</span>Reports & analytics</button></nav><div class="navlabel">SYSTEM</div><nav class="nav"><button data-page="settings"><span class="ico">⚙</span>Settings</button></nav><div class="sidebar-foot">Built for teams that move.<br><b>UNPLAN</b> · Creative Ideas. Real Impact.</div></aside>
-<main class="main"><header class="topbar"><div style="display:flex;align-items:center;gap:12px"><button class="mobile-menu" id="menu">☰</button><div><div class="crumb">UNPLAN / <span id="crumb">Overview</span></div><h1 id="pageTitle">People dashboard</h1></div></div><div class="top-actions"><div class="datepill" id="today">Monday, 26 Oct 2026</div><button class="avatar" title="Admin profile">U</button></div></header>
+<aside class="sidebar" id="sidebar"><div class="brand"><img class="brand-logo" src="unplan-logo.png" alt="UNPLAN — Creative Ideas. Real Impact."></div><div class="navlabel">WORKSPACE</div><nav class="nav" id="nav"><button class="active" data-page="dashboard"><span class="ico">▦</span>Overview</button><button data-page="attendance"><span class="ico">◷</span>Attendance</button><button data-page="employees"><span class="ico">♙</span>Employees</button><button data-page="leave"><span class="ico">▣</span>Leave management</button><button data-page="gps"><span class="ico">⌖</span>GPS & field tracking</button><button data-page="reports"><span class="ico">▥</span>Reports & analytics</button></nav><div class="navlabel">SYSTEM</div><nav class="nav"><button data-page="settings"><span class="ico">⚙</span>Settings</button></nav><div class="sidebar-foot">Built for teams that move.<br><b>UNPLAN</b> · Creative Ideas. Real Impact.</div></aside>
+<main class="main"><header class="topbar"><div style="display:flex;align-items:center;gap:12px"><button class="mobile-menu" id="menu">☰</button><div><div class="crumb">UNPLAN / <span id="crumb">Overview</span></div><h1 id="pageTitle">People dashboard</h1></div></div><div class="top-actions">
+      <div class="datepill" id="today">Monday, 26 Oct 2026</div>
+      <div class="admin-menu-wrap">
+        <button class="admin-trigger" id="adminMenuToggle" aria-haspopup="true" aria-expanded="false">
+          <span class="avatar" aria-hidden="true">A</span>
+          <span class="admin-trigger-label"><b id="adminName">Admin</b><small id="adminState">Not signed in</small></span>
+          <span class="admin-chevron" aria-hidden="true">▾</span>
+        </button>
+        <div class="admin-dropdown" id="adminDropdown" hidden>
+          <button type="button" id="adminLoginOpen">Admin login</button>
+          <button type="button" id="adminSignOut">Sign out</button>
+        </div>
+      </div>
+    </div></header>
 <div class="content">
 <section class="page active" id="page-dashboard"><div class="welcome"><div><h2>Good morning, Team UNPLAN 👋</h2><p>Here’s your workforce snapshot for today.</p></div><button class="btn primary" onclick="switchPage('attendance')">＋ Manage attendance</button></div>
 <div class="cards"><div class="card"><div class="metric-head">Total employees <span class="metric-icon">♙</span></div><div class="metric">142</div><div class="sub"><span class="up">+8</span> added this quarter</div></div><div class="card"><div class="metric-head">Present today <span class="metric-icon green">✓</span></div><div class="metric">118</div><div class="sub">83.1% of workforce</div></div><div class="card"><div class="metric-head">Absent today <span class="metric-icon red">↘</span></div><div class="metric">20</div><div class="sub">Includes approved leave</div></div><div class="card"><div class="metric-head">On field <span class="metric-icon orange">⌖</span></div><div class="metric">4</div><div class="sub"><span class="up">3 active</span> GPS sessions</div></div></div>
@@ -27,7 +85,23 @@
 <section class="page" id="page-reports"><div class="welcome"><div><h2>Reports & analytics</h2><p>Workforce attendance summaries and exports.</p></div><button class="btn primary" onclick="exportAttendance()">↓ Download attendance CSV</button></div><div class="cards"><div class="card"><div class="metric-head">Attendance rate</div><div class="metric">93.4%</div><div class="sub">Current month · sample</div></div><div class="card"><div class="metric-head">Avg. work hours</div><div class="metric">8h 12m</div><div class="sub">Per present employee</div></div><div class="card"><div class="metric-head">Late arrivals</div><div class="metric">31</div><div class="sub">Current month · sample</div></div><div class="card"><div class="metric-head">Field visits</div><div class="metric">86</div><div class="sub">Current month · sample</div></div></div><div class="card"><div class="card-title"><h3>Available reports</h3></div><div class="featuregrid"><div class="feature"><div class="ficon">📊</div><b>Daily attendance</b><p>Present, absent and late.</p><button class="link" onclick="exportAttendance()">Export CSV →</button></div><div class="feature"><div class="ficon">⏱️</div><b>Work hours</b><p>Shift hours and overtime.</p><button class="link" onclick="notify('Work-hours report needs real check-in/out data.')">View report →</button></div><div class="feature"><div class="ficon">📍</div><b>Field visits</b><p>Assignments and GPS events.</p><button class="link" onclick="switchPage('gps')">Open tracking →</button></div><div class="feature"><div class="ficon">🗓️</div><b>Leave summary</b><p>Balances and approvals.</p><button class="link" onclick="switchPage('leave')">View requests →</button></div></div></div></section>
 <section class="page" id="page-settings"><div class="welcome"><div><h2>Settings</h2><p>Configure the basics for your UNPLAN workspace.</p></div></div><div class="card section-card"><div class="card-title"><h3>Attendance policy</h3><span class="sub">Local demo settings</span></div><div class="toolbar"><label>Office start time<br><input type="time" value="09:00"></label><label>Office end time<br><input type="time" value="18:00"></label><label>Grace period (minutes)<br><input type="number" value="10" min="0" max="60"></label></div><div class="toolbar"><label>Geofence radius (metres)<br><input type="number" value="150" min="10"></label><label>GPS tracking mode<br><select><option>Only during field assignment</option><option>Check-in verification only</option><option>Disabled</option></select></label></div><button class="btn primary" onclick="notify('Demo only: settings are not saved to a server yet.')">Save settings</button></div><div class="card"><div class="card-title"><h3>Privacy & permissions</h3></div><p style="color:var(--muted);max-width:760px">Use transparent employee notices and explicit permission for location tracking. Limit GPS collection to approved work purposes, define retention periods, restrict access by role, and secure data in transit and at rest. This prototype does not upload location data or store employee records on a server.</p></div></section>
 <div class="footnote">UNPLAN People · UI prototype · Sample workforce data only. Connect a backend before real-world use.</div>
-</div></main></div><div class="toast" id="toast"></div>
+</div></main></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal-backdrop" id="adminLoginModal" hidden>
+  <section class="login-modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+    <button class="modal-close" type="button" id="adminLoginClose" aria-label="Close login">×</button>
+    <img class="login-logo" src="unplan-logo.png" alt="UNPLAN">
+    <h2 id="loginTitle">Admin login</h2>
+    <p class="login-note">Sign in with your UNPLAN People administrator account.</p>
+    <form id="adminLoginForm">
+      <label for="adminEmail">Email address</label>
+      <input id="adminEmail" name="email" type="email" autocomplete="username" required placeholder="admin@yourcompany.com">
+      <label for="adminPassword">Password</label>
+      <input id="adminPassword" name="password" type="password" autocomplete="current-password" required placeholder="Enter your password">
+      <p class="login-hint" id="loginHint">Authentication requires the deployed Laravel API. This screen does not validate credentials by itself.</p>
+      <button class="btn primary login-submit" type="submit">Sign in</button>
+    </form>
+  </section>
+</div>
 <script>
 const titles={dashboard:['Overview','People dashboard'],attendance:['Attendance','Attendance management'],employees:['Employees','Employee directory'],leave:['Leave management','Leave & permissions'],gps:['GPS & field tracking','GPS & field tracking'],reports:['Reports & analytics','Reports & analytics'],settings:['Settings','Workspace settings']};
 function switchPage(name){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+name).classList.add('active');document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===name));document.getElementById('crumb').textContent=titles[name][0];document.getElementById('pageTitle').textContent=titles[name][1];document.getElementById('sidebar').classList.remove('open');window.scrollTo({top:0,behavior:'smooth'})}
@@ -40,4 +114,49 @@ document.getElementById('checkIn').onclick=()=>{if(!navigator.geolocation){markA
 function filterRows(inputId,tableId){const q=document.getElementById(inputId).value.toLowerCase();document.querySelectorAll('#'+tableId+' tbody tr').forEach(r=>r.style.display=r.textContent.toLowerCase().includes(q)?'':'none')}document.getElementById('attSearch').addEventListener('input',()=>filterRows('attSearch','attTable'));document.getElementById('empSearch').addEventListener('input',()=>filterRows('empSearch','empTable'));document.getElementById('attFilter').addEventListener('change',e=>{document.querySelectorAll('#attTable tbody tr').forEach(r=>{const s=e.target.value==='all'||r.dataset.status===e.target.value;r.style.display=s&&r.textContent.toLowerCase().includes(document.getElementById('attSearch').value.toLowerCase())?'':'none'})});
 function exportAttendance(){const rows=[['Employee','Date','Check In','Check Out','Hours','Status'],['Arun Kumar','26 Oct 2026','09:02 AM','','','On time'],['Shreya R','26 Oct 2026','09:18 AM','','','Late'],['Vijay M','26 Oct 2026','08:54 AM','05:42 PM','8h 48m','On time'],['Priya S','26 Oct 2026','','','','On leave']];const csv=rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(',')).join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));a.download='unplan-attendance-demo.csv';a.click();URL.revokeObjectURL(a.href)}document.getElementById('attendanceExport').onclick=exportAttendance;
 function approve(b){b.parentElement.innerHTML='<span class="status">Approved</span>';notify('Request marked approved in demo view.')}function reject(b){b.parentElement.innerHTML='<span class="status off">Rejected</span>';notify('Request marked rejected in demo view.')}
+
+// Admin menu UI. Real authentication is enabled only when the Laravel API helper
+// provides login/logout methods and the API base URL is configured.
+const adminToggle=document.getElementById('adminMenuToggle');
+const adminDropdown=document.getElementById('adminDropdown');
+const loginModal=document.getElementById('adminLoginModal');
+const loginForm=document.getElementById('adminLoginForm');
+const loginHint=document.getElementById('loginHint');
+function closeAdminDropdown(){adminDropdown.hidden=true;adminToggle.setAttribute('aria-expanded','false')}
+adminToggle.addEventListener('click',()=>{adminDropdown.hidden=!adminDropdown.hidden;adminToggle.setAttribute('aria-expanded',String(!adminDropdown.hidden))});
+document.addEventListener('click',e=>{if(!e.target.closest('.admin-menu-wrap'))closeAdminDropdown()});
+document.getElementById('adminLoginOpen').addEventListener('click',()=>{closeAdminDropdown();loginModal.hidden=false;document.getElementById('adminEmail').focus()});
+document.getElementById('adminLoginClose').addEventListener('click',()=>{loginModal.hidden=true});
+loginModal.addEventListener('click',e=>{if(e.target===loginModal)loginModal.hidden=true});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){loginModal.hidden=true;closeAdminDropdown()}});
+loginForm.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const api=window.UnplanAPI;
+  if(!api||typeof api.login!=='function'){
+    loginHint.textContent='Login is not connected yet. Deploy/configure the Laravel API and add its login method before using real admin credentials.';
+    notify('Admin login is not connected to the backend yet.');
+    return;
+  }
+  const submit=loginForm.querySelector('button[type="submit"]');
+  submit.disabled=true;submit.textContent='Signing in…';
+  try{
+    const result=await api.login(document.getElementById('adminEmail').value,document.getElementById('adminPassword').value);
+    if(result&&result.token&&typeof api.setToken==='function')api.setToken(result.token);
+    document.getElementById('adminName').textContent=(result?.user?.name||'Admin');
+    document.getElementById('adminState').textContent='Signed in';
+    loginModal.hidden=true;loginForm.reset();loginHint.textContent='Signed in to UNPLAN People.';
+    notify('Signed in successfully.');
+  }catch(err){loginHint.textContent=err.message||'Unable to sign in.';notify(loginHint.textContent)}
+  finally{submit.disabled=false;submit.textContent='Sign in'}
+});
+document.getElementById('adminSignOut').addEventListener('click',async()=>{
+  closeAdminDropdown();
+  const api=window.UnplanAPI;
+  try{if(api&&typeof api.logout==='function')await api.logout()}catch(err){console.warn('Server sign-out failed:',err)}
+  if(api&&typeof api.clearToken==='function')api.clearToken();
+  document.getElementById('adminName').textContent='Admin';
+  document.getElementById('adminState').textContent='Not signed in';
+  loginForm.reset();
+  notify('Signed out of this browser session.');
+});
 </script></body></html>
